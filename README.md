@@ -12,8 +12,9 @@ This way, only changed `sampleblocks` will be committed.
 If you use destructive operations on your samples, this project will probably not help you.
 If you however only move around samples or change the hull curve, it might save a lot of space.
 
-CAUTION: Of course this tool is highly experimental. Just do not use it. Thank you very much.
+CAUTION: Audacity projects are still big. It's probably still a bad idea to version control them in `git`.
 
+CAUTION: Of course this tool is highly experimental. Just do not use it. Thank you very much.
 
 ## `.gitignore`
 
@@ -25,6 +26,7 @@ As you do not want to commit the `.aup3` (and the temporary file), use this `.gi
 *.aup3.bak
 ```
 
+
 ## Usage
 
 To convert `Fantasy_Ambience.aup3` into a format which is of use for `git`:
@@ -33,6 +35,8 @@ To convert `Fantasy_Ambience.aup3` into a format which is of use for `git`:
 $ python3 aup3git.py explode Fantasy_Ambience.aup3
 $ git commit [...]
 ```
+
+CAUTION: You may want to close Audacity before using `explode`. Audacity cleans the database file when the application is closed.
 
 To restore `Fantasy_Ambience.aup3.sql.dir` into a `.aup3` again:
 
